@@ -1,0 +1,287 @@
+<html>
+<head>
+<title>assigment1code.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #5f826b; font-style: italic;}
+.s4 { color: #7a7e85;}
+.s5 { color: #6aab73;}
+.s6 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+assigment1code.py</font>
+</center></td></tr></table>
+<pre><span class="s0">from </span><span class="s1">enum </span><span class="s0">import </span><span class="s1">Enum</span>
+
+
+<span class="s0">class </span><span class="s1">User</span><span class="s2">:</span>
+    <span class="s3">&quot;&quot;&quot;Class to represent a user&quot;&quot;&quot;</span>
+
+    <span class="s4"># Enum for gender</span>
+    <span class="s0">class </span><span class="s1">Gender</span><span class="s2">(</span><span class="s1">Enum</span><span class="s2">):</span>
+        <span class="s1">MALE </span><span class="s2">= </span><span class="s5">&quot;Male&quot;</span>
+        <span class="s1">FEMALE </span><span class="s2">= </span><span class="s5">&quot;Female&quot;</span>
+
+    <span class="s4"># Constructor</span>
+    <span class="s0">def </span><span class="s1">__init__</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">userEmail</span><span class="s2">, </span><span class="s1">userPass</span><span class="s2">, </span><span class="s1">gender</span><span class="s2">, </span><span class="s1">userID</span><span class="s2">, </span><span class="s1">userName</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__userEmail </span><span class="s2">= </span><span class="s1">userEmail</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__userPass </span><span class="s2">= </span><span class="s1">userPass</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__gender </span><span class="s2">= </span><span class="s1">gender</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__userID </span><span class="s2">= </span><span class="s1">userID</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__userName </span><span class="s2">= </span><span class="s1">userName</span>
+
+    <span class="s4"># Setter and Getter methods for all attributes</span>
+    <span class="s0">def </span><span class="s1">setUserEmail</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">userEmail</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__userEmail </span><span class="s2">= </span><span class="s1">userEmail</span>
+
+    <span class="s0">def </span><span class="s1">getUserEmail</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__userEmail</span>
+
+    <span class="s0">def </span><span class="s1">setUserPass</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">userPass</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__userPass </span><span class="s2">= </span><span class="s1">userPass</span>
+
+    <span class="s0">def </span><span class="s1">getUserPass</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__userPass</span>
+
+    <span class="s0">def </span><span class="s1">setGender</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">gender</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__gender </span><span class="s2">= </span><span class="s1">gender</span>
+
+    <span class="s0">def </span><span class="s1">getGender</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__gender</span>
+
+    <span class="s0">def </span><span class="s1">setUserID</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">userID</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__userID </span><span class="s2">= </span><span class="s1">userID</span>
+
+    <span class="s0">def </span><span class="s1">getUserID</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__userID</span>
+
+    <span class="s0">def </span><span class="s1">setUserName</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">userName</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__userName </span><span class="s2">= </span><span class="s1">userName</span>
+
+    <span class="s0">def </span><span class="s1">getUserName</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__userName</span>
+
+
+<span class="s0">class </span><span class="s1">SpecialService</span><span class="s2">:</span>
+    <span class="s3">&quot;&quot;&quot;Class to represent a special service&quot;&quot;&quot;</span>
+
+    <span class="s4"># Enum for serviceType</span>
+    <span class="s0">class </span><span class="s1">ServiceType</span><span class="s2">(</span><span class="s1">Enum</span><span class="s2">):</span>
+        <span class="s1">MEAL_PREFERENCE </span><span class="s2">= </span><span class="s5">&quot;Meal Preference&quot;</span>
+        <span class="s1">WHEELCHAIR </span><span class="s2">= </span><span class="s5">&quot;Wheelchair&quot;</span>
+        <span class="s1">EXTRA_LEG_ROOM </span><span class="s2">= </span><span class="s5">&quot;Extra Leg Room&quot;</span>
+        <span class="s1">EXTRA_CARRYON_SPACE </span><span class="s2">= </span><span class="s5">&quot;Extra Carryon Space&quot;</span>
+
+    <span class="s4"># Constructor</span>
+    <span class="s0">def </span><span class="s1">__init__</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">serviceType</span><span class="s2">, </span><span class="s1">additionalDetails</span><span class="s2">, </span><span class="s1">serviceID</span><span class="s2">, </span><span class="s1">serviceName</span><span class="s2">, </span><span class="s1">serviceCost</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__serviceType </span><span class="s2">= </span><span class="s1">serviceType</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__additionalDetails </span><span class="s2">= </span><span class="s1">additionalDetails</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__serviceID </span><span class="s2">= </span><span class="s1">serviceID</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__serviceName </span><span class="s2">= </span><span class="s1">serviceName</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__serviceCost </span><span class="s2">= </span><span class="s1">serviceCost</span>
+
+    <span class="s4"># Setter and Getter methods for all attributes</span>
+    <span class="s0">def </span><span class="s1">setServiceType</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">serviceType</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__serviceType </span><span class="s2">= </span><span class="s1">serviceType</span>
+
+    <span class="s0">def </span><span class="s1">getServiceType</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__serviceType</span>
+
+    <span class="s0">def </span><span class="s1">setAdditionalDetails</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">additionalDetails</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__additionalDetails </span><span class="s2">= </span><span class="s1">additionalDetails</span>
+
+    <span class="s0">def </span><span class="s1">getAdditionalDetails</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__additionalDetails</span>
+
+    <span class="s0">def </span><span class="s1">setServiceID</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">serviceID</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__serviceID </span><span class="s2">= </span><span class="s1">serviceID</span>
+
+    <span class="s0">def </span><span class="s1">getServiceID</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__serviceID</span>
+
+    <span class="s0">def </span><span class="s1">setServiceName</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">serviceName</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__serviceName </span><span class="s2">= </span><span class="s1">serviceName</span>
+
+    <span class="s0">def </span><span class="s1">getServiceName</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__serviceName</span>
+
+    <span class="s0">def </span><span class="s1">setServiceCost</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">serviceCost</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__serviceCost </span><span class="s2">= </span><span class="s1">serviceCost</span>
+
+    <span class="s0">def </span><span class="s1">getServiceCost</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__serviceCost</span>
+
+
+<span class="s0">class </span><span class="s1">BoardingPass</span><span class="s2">:</span>
+    <span class="s3">&quot;&quot;&quot;Class to represent a boarding pass&quot;&quot;&quot;</span>
+
+    <span class="s4"># Constructor</span>
+    <span class="s0">def </span><span class="s1">__init__</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">passName</span><span class="s2">, </span><span class="s1">fromDest</span><span class="s2">, </span><span class="s1">seatNum</span><span class="s2">, </span><span class="s1">gate</span><span class="s2">, </span><span class="s1">date</span><span class="s2">, </span><span class="s1">toDest</span><span class="s2">, </span><span class="s1">flightNum</span><span class="s2">, </span><span class="s1">terminal</span><span class="s2">, </span><span class="s1">boardingTime</span><span class="s2">, </span><span class="s1">seatClass</span><span class="s2">,</span>
+                 <span class="s1">electronicTicket</span><span class="s2">, </span><span class="s1">arrivalTime</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__passName </span><span class="s2">= </span><span class="s1">passName</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__fromDest </span><span class="s2">= </span><span class="s1">fromDest</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__seatNum </span><span class="s2">= </span><span class="s1">seatNum</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__gate </span><span class="s2">= </span><span class="s1">gate</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__date </span><span class="s2">= </span><span class="s1">date</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__toDest </span><span class="s2">= </span><span class="s1">toDest</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__flightNum </span><span class="s2">= </span><span class="s1">flightNum</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__terminal </span><span class="s2">= </span><span class="s1">terminal</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__boardingTime </span><span class="s2">= </span><span class="s1">boardingTime</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__seatClass </span><span class="s2">= </span><span class="s1">seatClass</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__electronicTicket </span><span class="s2">= </span><span class="s1">electronicTicket</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__arrivalTime </span><span class="s2">= </span><span class="s1">arrivalTime</span>
+
+    <span class="s4"># Setter and Getter methods for all attributes</span>
+    <span class="s0">def </span><span class="s1">setPassName</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">passName</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__passName </span><span class="s2">= </span><span class="s1">passName</span>
+
+    <span class="s0">def </span><span class="s1">getPassName</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__passName</span>
+
+    <span class="s0">def </span><span class="s1">setFromDest</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">fromDest</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__fromDest </span><span class="s2">= </span><span class="s1">fromDest</span>
+
+    <span class="s0">def </span><span class="s1">getFromDest</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__fromDest</span>
+
+    <span class="s0">def </span><span class="s1">setSeatNum</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">seatNum</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__seatNum </span><span class="s2">= </span><span class="s1">seatNum</span>
+
+    <span class="s0">def </span><span class="s1">getSeatNum</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__seatNum</span>
+
+    <span class="s0">def </span><span class="s1">setGate</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">gate</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__gate </span><span class="s2">= </span><span class="s1">gate</span>
+
+    <span class="s0">def </span><span class="s1">getGate</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__gate</span>
+
+    <span class="s0">def </span><span class="s1">setDate</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">date</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__date </span><span class="s2">= </span><span class="s1">date</span>
+
+    <span class="s0">def </span><span class="s1">getDate</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__date</span>
+
+    <span class="s0">def </span><span class="s1">setToDest</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">toDest</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__toDest </span><span class="s2">= </span><span class="s1">toDest</span>
+
+    <span class="s0">def </span><span class="s1">getToDest</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__toDest</span>
+
+    <span class="s0">def </span><span class="s1">setFlightNum</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">flightNum</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__flightNum </span><span class="s2">= </span><span class="s1">flightNum</span>
+
+    <span class="s0">def </span><span class="s1">getFlightNum</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__flightNum</span>
+
+    <span class="s0">def </span><span class="s1">setTerminal</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">terminal</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__terminal </span><span class="s2">= </span><span class="s1">terminal</span>
+
+    <span class="s0">def </span><span class="s1">getTerminal</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__terminal</span>
+
+    <span class="s0">def </span><span class="s1">setBoardingTime</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">boardingTime</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__boardingTime </span><span class="s2">= </span><span class="s1">boardingTime</span>
+
+    <span class="s0">def </span><span class="s1">getBoardingTime</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__boardingTime</span>
+
+    <span class="s0">def </span><span class="s1">setSeatClass</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">seatClass</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__seatClass </span><span class="s2">= </span><span class="s1">seatClass</span>
+
+    <span class="s0">def </span><span class="s1">getSeatClass</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__seatClass</span>
+
+    <span class="s0">def </span><span class="s1">setElectronicTicket</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">electronicTicket</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__electronicTicket </span><span class="s2">= </span><span class="s1">electronicTicket</span>
+
+    <span class="s0">def </span><span class="s1">getElectronicTicket</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__electronicTicket</span>
+
+    <span class="s0">def </span><span class="s1">setArrivalTime</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">arrivalTime</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__arrivalTime </span><span class="s2">= </span><span class="s1">arrivalTime</span>
+
+    <span class="s0">def </span><span class="s1">getArrivalTime</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__arrivalTime</span>
+
+
+<span class="s0">class </span><span class="s1">Airport</span><span class="s2">:</span>
+    <span class="s3">&quot;&quot;&quot;Class to represent an airport&quot;&quot;&quot;</span>
+
+    <span class="s4"># Constructor</span>
+    <span class="s0">def </span><span class="s1">__init__</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">airportName</span><span class="s2">, </span><span class="s1">airportLoc</span><span class="s2">, </span><span class="s1">airportCode</span><span class="s2">, </span><span class="s1">numTerminals</span><span class="s2">, </span><span class="s1">numGates</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__airportName </span><span class="s2">= </span><span class="s1">airportName</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__airportLoc </span><span class="s2">= </span><span class="s1">airportLoc</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__airportCode </span><span class="s2">= </span><span class="s1">airportCode</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__numTerminals </span><span class="s2">= </span><span class="s1">numTerminals</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__numGates </span><span class="s2">= </span><span class="s1">numGates</span>
+
+    <span class="s4"># Setter and Getter methods for all attributes</span>
+    <span class="s0">def </span><span class="s1">setAirportName</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">airportName</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__airportName </span><span class="s2">= </span><span class="s1">airportName</span>
+
+    <span class="s0">def </span><span class="s1">getAirportName</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__airportName</span>
+
+    <span class="s0">def </span><span class="s1">setAirportLoc</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">airportLoc</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__airportLoc </span><span class="s2">= </span><span class="s1">airportLoc</span>
+
+    <span class="s0">def </span><span class="s1">getAirportLoc</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__airportLoc</span>
+
+    <span class="s0">def </span><span class="s1">setAirportCode</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">airportCode</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__airportCode </span><span class="s2">= </span><span class="s1">airportCode</span>
+
+    <span class="s0">def </span><span class="s1">getAirportCode</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__airportCode</span>
+
+    <span class="s0">def </span><span class="s1">setNumTerminals</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">numTerminals</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__numTerminals </span><span class="s2">= </span><span class="s1">numTerminals</span>
+
+    <span class="s0">def </span><span class="s1">getNumTerminals</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__numTerminals</span>
+
+    <span class="s0">def </span><span class="s1">setNumGates</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">numGates</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">__numGates </span><span class="s2">= </span><span class="s1">numGates</span>
+
+    <span class="s0">def </span><span class="s1">getNumGates</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">return </span><span class="s1">self</span><span class="s2">.</span><span class="s1">__numGates</span>
+
+<span class="s4"># Create an object for each class</span>
+
+<span class="s4"># Create User object</span>
+<span class="s1">user </span><span class="s2">= </span><span class="s1">User</span><span class="s2">(</span><span class="s5">&quot;rawdha@gmail.com&quot;</span><span class="s2">, </span><span class="s5">&quot;rawdh128472&quot;</span><span class="s2">, </span><span class="s1">User</span><span class="s2">.</span><span class="s1">Gender</span><span class="s2">.</span><span class="s1">FEMALE</span><span class="s2">, </span><span class="s5">&quot;AU18239&quot;</span><span class="s2">, </span><span class="s5">&quot;rawdhalh&quot;</span><span class="s2">)</span>
+
+<span class="s4"># Create SpecialService object</span>
+<span class="s1">service </span><span class="s2">= </span><span class="s1">SpecialService</span><span class="s2">(</span><span class="s1">SpecialService</span><span class="s2">.</span><span class="s1">ServiceType</span><span class="s2">.</span><span class="s1">MEAL_PREFERENCE</span><span class="s2">, </span><span class="s5">&quot;Vegetarian&quot;</span><span class="s2">, </span><span class="s5">&quot;S2718&quot;</span><span class="s2">, </span><span class="s5">&quot;Meal Preference&quot;</span><span class="s2">, </span><span class="s6">15.99</span><span class="s2">)</span>
+
+<span class="s4"># Create BoardingPass object</span>
+<span class="s1">boarding_pass </span><span class="s2">= </span><span class="s1">BoardingPass</span><span class="s2">(</span><span class="s5">&quot;Rawdha AlHarmoodi&quot;</span><span class="s2">, </span><span class="s5">&quot;Abu Dhabi, UAE&quot;</span><span class="s2">, </span><span class="s5">&quot;A23&quot;</span><span class="s2">, </span><span class="s5">&quot;B4&quot;</span><span class="s2">, </span><span class="s5">&quot;2024-02-25&quot;</span><span class="s2">, </span><span class="s5">&quot;Milan, Italy&quot;</span><span class="s2">, </span><span class="s5">&quot;Fl2894&quot;</span><span class="s2">, </span><span class="s5">&quot;Terminal 4&quot;</span><span class="s2">, </span><span class="s5">&quot;12:00 AM&quot;</span><span class="s2">, </span><span class="s5">&quot;Business&quot;</span><span class="s2">, </span><span class="s5">&quot;ET7627&quot;</span><span class="s2">, </span><span class="s5">&quot;10:30 PM&quot;</span><span class="s2">)</span>
+
+<span class="s4"># Create Airport object</span>
+<span class="s1">airport </span><span class="s2">= </span><span class="s1">Airport</span><span class="s2">(</span><span class="s5">&quot;Zayed International Airport&quot;</span><span class="s2">, </span><span class="s5">&quot;Abu Dhabi, UAE&quot;</span><span class="s2">, </span><span class="s5">&quot;AE&quot;</span><span class="s2">, </span><span class="s6">10</span><span class="s2">, </span><span class="s6">50</span><span class="s2">)</span>
+
+<span class="s4"># Displaying the boarding pass details</span>
+
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Boarding Pass Details:&quot;</span><span class="s2">)</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Passenger Name:&quot;</span><span class="s2">, </span><span class="s1">boarding_pass</span><span class="s2">.</span><span class="s1">getPassName</span><span class="s2">())</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;From:&quot;</span><span class="s2">, </span><span class="s1">boarding_pass</span><span class="s2">.</span><span class="s1">getFromDest</span><span class="s2">())</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;To:&quot;</span><span class="s2">, </span><span class="s1">boarding_pass</span><span class="s2">.</span><span class="s1">getToDest</span><span class="s2">())</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Date:&quot;</span><span class="s2">, </span><span class="s1">boarding_pass</span><span class="s2">.</span><span class="s1">getDate</span><span class="s2">())</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Flight Number:&quot;</span><span class="s2">, </span><span class="s1">boarding_pass</span><span class="s2">.</span><span class="s1">getFlightNum</span><span class="s2">())</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Gate:&quot;</span><span class="s2">, </span><span class="s1">boarding_pass</span><span class="s2">.</span><span class="s1">getGate</span><span class="s2">())</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Terminal:&quot;</span><span class="s2">, </span><span class="s1">boarding_pass</span><span class="s2">.</span><span class="s1">getTerminal</span><span class="s2">())</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Boarding Time:&quot;</span><span class="s2">, </span><span class="s1">boarding_pass</span><span class="s2">.</span><span class="s1">getBoardingTime</span><span class="s2">())</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Seat Class:&quot;</span><span class="s2">, </span><span class="s1">boarding_pass</span><span class="s2">.</span><span class="s1">getSeatClass</span><span class="s2">())</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Electronic Ticket:&quot;</span><span class="s2">, </span><span class="s1">boarding_pass</span><span class="s2">.</span><span class="s1">getElectronicTicket</span><span class="s2">())</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Arrival Time:&quot;</span><span class="s2">, </span><span class="s1">boarding_pass</span><span class="s2">.</span><span class="s1">getArrivalTime</span><span class="s2">())</span>
+</pre>
+</body>
+</html>
